@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Gunung Kembang</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="logo-highlight">2340</span> Mdpl</h1>
+                <p class="subtitle">Gunung Kembang</p>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="profil.html"><i class="fas fa-mountain"></i> Profil Wisata</a></li>
+                    <li><a href="galeri.html" class="active"><i class="fas fa-images"></i> Galeri</a></li>
+                    <li><a href="lokasi.html"><i class="fas fa-map-marked-alt"></i> Denah Lokasi</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Galeri Gunung Kembang</h1>
+            <p>Koleksi visual keindahan dan momen spesial di Gunung Kembang</p>
+        </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container">
+        <!-- Galeri Utama dengan Slideshow -->
+        <section class="slideshow-section">
+            <div class="section-header">
+                <h2>Spot Terbaik Gunung Kembang</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="slide active">
+                        <img src="img/pemandangan-profil1.jpeg" alt="Pemandangan Gunung Kembang" loading="eager" width="2000" height="1800">
+                        <div class="slide-caption">Puncak Gunung Kembang di pagi hari</div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/galeri-slide2.jpeg" alt="Sabana Rumput" loading="lazy" width="2000" height="1800">
+                        <div class="slide-caption">Jalur pendakian yang dipenuhi vegetasi rumput</div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/galeri-slide1.jpeg" alt="Pemandangan Sunrise" loading="lazy" width="2000" height="1800">
+                        <div class="slide-caption">Pemandangan Sunrise di sore hari</div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/galeri-slide3.jpeg" alt="Basecamp" loading="lazy" width="2000" height="1800">
+                        <div class="slide-caption">Basecamp pendakian</div>
+                    </div>
+                    
+                    <!-- Tombol navigasi slideshow -->
+                    <button class="slide-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-btn next-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Indikator slide -->
+                    <div class="slide-indicators" id="slideIndicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                    </div>
+                </div>
+                
+                <div class="slideshow-controls">
+                    <button id="playPauseBtn">
+                        <i class="fas fa-pause"></i> Jeda Slideshow
+                    </button>
+                    <div class="slide-info">
+                        Slide <span id="currentSlide">1</span> dari <span id="totalSlides">4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Galeri Grid -->
+        <section class="gallery-section">
+            <div class="section-header">
+                <h2>Koleksi Foto</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Klik gambar untuk melihat dalam ukuran lebih besar</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto3.jpeg" alt="Puncak Gunung Kembang" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Puncak Gunung Kembang</div>
+                        <button class="view-btn" data-img="img/koleksi-foto3.jpeg" data-caption="Puncak Gunung Kembang via blembem">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto5.jpeg" alt="Jalur Pendakian" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Jalur Pendakian</div>
+                        <button class="view-btn" data-img="img/koleksi-foto5.jpeg" data-caption="Jalur pendakian yang dipenuhi vegetasi lebat dengan akar tunggang dari pepohonan">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto2.jpeg" alt="Pemandangan Sindoro" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Pemandangan Sindoro</div>
+                        <button class="view-btn" data-img="img/koleksi-foto2.jpeg" data-caption="Pemandangan Gunung Sindoro dari jalur pendakian Gunung Kembang">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto6.jpeg" alt="Bunga edelweis" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Bunga Edelweis</div>
+                        <button class="view-btn" data-img="img/koleksi-foto6.jpeg" data-caption="Kenampakan bunga edelweis di sekitar jalur pendakian Gunung Kembang">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gambar tambahan (akan diganti dengan gambar yang Anda kirim) -->
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto1.jpeg" alt="Jalur Pendakian" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Jalur Sabana</div>
+                        <button class="view-btn" data-img="img/koleksi-foto1.jpeg" data-caption="Jalur Pendakian dengan pemandangan Sabana">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="img/koleksi-foto4.jpeg" alt="Kawah mati di Gunung Kembang" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Kawah Mati</div>
+                        <button class="view-btn" data-img="img/koleksi-foto4.jpeg" data-caption="Pemandangan kawah mati di Gunung Kembang">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal untuk gambar besar -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <div id="modalCaption"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>2340 Mdpl</h3>
+                    <p>Gunung Kembang - Ruang Tenang di Jantung Pegunungan</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil Wisata</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                        <li><a href="lokasi.html">Denah Lokasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-info">
+                    <h4>Informasi</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Desa Damarkasiyan, Kecamatan Kertek, Wonosobo, Jawa Tengah</p>
+                    <p><i class="fas fa-clock"></i> Buka 24 jam</p>
+                    <p><i class="fas fa-ticket-alt"></i> Simaksi: Rp 35.000</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 2340 Mdpl - Gunung Kembang. Semua hak dilindungi.</p>
+                <p class="credit">Dibuat dengan <i class="fas fa-heart"></i> untuk para pendaki</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
